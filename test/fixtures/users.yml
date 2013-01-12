@@ -1,0 +1,13 @@
+daniel:
+  first_name: "Daniel"
+  last_name: "Beere"
+  email: "dannybeere15@yahoo.co.uk"
+  profile_name: "danielbeere"
+  #password: "danb15"
+  #password_confirmation: "danb15"
+
+shane:
+  first_name: "Peter"
+  last_name: "Parker"
+  email: "peterparker15@yahoo.co.uk"
+  profile_name: "peterparker"
