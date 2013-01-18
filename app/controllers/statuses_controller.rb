@@ -8,6 +8,7 @@ class StatusesController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @statuses }
+      @statuses.sort! { |a,b| b.created_at.to_i <=> a.created_at.to_i }
     end
   end
 
