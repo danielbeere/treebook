@@ -15,10 +15,12 @@
       <p><%= status.content %></p>
       <div class="meta">
         <%= link_to time_ago_in_words(status.created_at) + " ago", status %> 
-        <span class="admin">
-          | <%= link_to "Edit", edit_status_path(status) %> | 
-          <%= link_to "Delete", status, method: :delete, data: { confirm: "Are you sure your want to delete this status?"} %>
-        </span>
+        <% if (user_signed_in?) && (status.user.full_name == current_user.full_name) %>
+          <span class="admin">
+            | <%= link_to "Edit", edit_status_path(status) %> | 
+            <%= link_to "Delete", status, method: :delete, data: { confirm: "Are you sure your want to delete this status?"} %>
+          </span>
+        <% end %>
       </div>
     </div>
   </div>
